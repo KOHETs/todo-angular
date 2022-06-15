@@ -1,0 +1,22 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/ui-todo/src",
+  "prefix": "todo",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ui-todo"],
+      "options": {
+        "jestConfig": "libs/ui-todo/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/ui-todo/**/*.ts", "libs/ui-todo/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

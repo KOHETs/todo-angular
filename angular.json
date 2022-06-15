@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "standard": "apps/standard",
-    "standard-e2e": "apps/standard-e2e"
+    "standard-e2e": "apps/standard-e2e",
+    "ui-todo": "libs/ui-todo"
   }
 }
