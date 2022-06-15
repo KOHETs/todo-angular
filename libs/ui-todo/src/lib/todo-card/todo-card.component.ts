@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatSelectionListChange } from '@angular/material/list';
+import { Todo } from '@todo/data-access-todo';
 
 @Component({
   selector: 'ui-todo-card',
@@ -7,25 +8,32 @@ import { MatSelectionListChange } from '@angular/material/list';
   styleUrls: ['./todo-card.component.scss'],
 })
 export class TodoCardComponent {
-  newTodo = '';
+  newTodo: Todo['name'] = '';
 
-  @Input() todos: { name: string; completed: boolean }[] = [];
+  @Input() todos: Todo[] = [];
 
-  @Output() addTodo = new EventEmitter<string>();
-  @Output() completionChanged = new EventEmitter<{
-    name: string;
-    completed: boolean;
-  }>();
-  @Output() clearCompleted = new EventEmitter<void>();
+  @Output() addTodo = new EventEmitter<Todo['name']>();
+  @Output() completionChanged = new EventEmitter<Todo>();
+  @Output() clearTodos = new EventEmitter<Todo['id'][]>();
 
-  addTodoAndClearInput(name: string) {
+  addTodoAndClearInput(name: Todo['name']) {
     this.addTodo.emit(name);
     this.newTodo = '';
   }
 
+  clearCompleted() {
+    const ids = this.todos
+      .filter((todo) => todo.completed)
+      .map((todo) => todo.id);
+
+    this.clearTodos.emit(ids);
+  }
+
   todoSelectionChanged($event: MatSelectionListChange) {
     $event.options.forEach((option) => {
-      this.completionChanged.emit(option.value);
+      const updatedTodo: Todo = { ...option.value, completed: option.selected };
+
+      this.completionChanged.emit(updatedTodo);
     });
   }
 }
