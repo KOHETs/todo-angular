@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "data-access-todo": "libs/data-access-todo",
     "standard": "apps/standard",
     "standard-e2e": "apps/standard-e2e",
     "ui-todo": "libs/ui-todo"

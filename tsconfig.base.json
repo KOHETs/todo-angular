@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@todo/data-access-todo": ["libs/data-access-todo/src/index.ts"],
       "@todo/ui-todo": ["libs/ui-todo/src/index.ts"]
     }
   },
