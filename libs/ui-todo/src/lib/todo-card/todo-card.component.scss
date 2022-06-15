@@ -9,6 +9,7 @@
   flex-flow: column nowrap;
   @media screen and (max-width: 600px) {
     border: none;
+    border-radius: 0px;
   }
 }
 
