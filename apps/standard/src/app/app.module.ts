@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { UiTodoModule } from '@todo/ui-todo';
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
-  imports: [BrowserModule, UiTodoModule],
+  imports: [BrowserModule, UiTodoModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

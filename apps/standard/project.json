@@ -14,7 +14,10 @@
         "tsConfig": "apps/standard/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": ["apps/standard/src/favicon.ico", "apps/standard/src/assets"],
-        "styles": ["apps/standard/src/styles.scss"],
+        "styles": [
+          "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+          "apps/standard/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
