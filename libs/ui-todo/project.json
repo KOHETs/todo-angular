@@ -1,7 +1,7 @@
 {
   "projectType": "library",
   "sourceRoot": "libs/ui-todo/src",
-  "prefix": "todo",
+  "prefix": "ui",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
