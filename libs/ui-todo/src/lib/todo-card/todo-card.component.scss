@@ -1,0 +1,46 @@
+.container {
+  box-sizing: border-box;
+  border: solid 1px lightgray;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  @media screen and (max-width: 600px) {
+    border: none;
+  }
+}
+
+.toolbar {
+  flex: none;
+}
+
+.spacer {
+  flex: auto;
+}
+
+.list {
+  flex: auto;
+  overflow: auto;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.empty {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.form {
+  flex: none;
+}
+
+.form-control {
+  flex: auto;
+}

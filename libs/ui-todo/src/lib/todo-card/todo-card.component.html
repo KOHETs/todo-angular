@@ -1,0 +1,49 @@
+<div class="container">
+  <mat-toolbar color="primary" class="toolbar">
+    <span>Todo App</span>
+    <span class="spacer"></span>
+    <button
+      mat-icon-button
+      matTooltip="Delete completed tasks"
+      (click)="clearCompleted.emit()"
+    >
+      <mat-icon>clear_all</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <div class="list">
+    <ng-container *ngIf="todos?.length; else emptyBlock">
+      <mat-selection-list (selectionChange)="todoSelectionChanged($event)">
+        <mat-list-option
+          [class.completed]="todo.completed"
+          [selected]="todo.completed"
+          [value]="todo"
+          checkboxPosition="before"
+          *ngFor="let todo of todos"
+          >{{ todo.name }}</mat-list-option
+        >
+      </mat-selection-list>
+    </ng-container>
+    <ng-template #emptyBlock>
+      <div class="empty">
+        <mat-icon color="accent">task_alt</mat-icon>
+        <p>All done.</p>
+      </div>
+    </ng-template>
+  </div>
+
+  <form class="form" (ngSubmit)="addTodoAndClearInput(this.newTodo)">
+    <mat-toolbar>
+      <mat-form-field appearance="standard" class="form-control">
+        <input
+          matInput
+          placeholder="What needs to be done?"
+          name="todo"
+          [(ngModel)]="newTodo"
+          autofocus
+          autocomplete="off"
+        />
+      </mat-form-field>
+    </mat-toolbar>
+  </form>
+</div>
