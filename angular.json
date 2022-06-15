@@ -5,6 +5,8 @@
     "cqrs": "apps/cqrs",
     "cqrs-e2e": "apps/cqrs-e2e",
     "data-access-todo": "libs/data-access-todo",
+    "root-store": "apps/root-store",
+    "root-store-e2e": "apps/root-store-e2e",
     "standard": "apps/standard",
     "standard-e2e": "apps/standard-e2e",
     "ui-todo": "libs/ui-todo"
