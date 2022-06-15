@@ -2,6 +2,8 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "cqrs": "apps/cqrs",
+    "cqrs-e2e": "apps/cqrs-e2e",
     "data-access-todo": "libs/data-access-todo",
     "standard": "apps/standard",
     "standard-e2e": "apps/standard-e2e",
