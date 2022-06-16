@@ -7,6 +7,8 @@
     "cqrs": "apps/cqrs",
     "cqrs-e2e": "apps/cqrs-e2e",
     "data-access-todo": "libs/data-access-todo",
+    "root-component-store": "apps/root-component-store",
+    "root-component-store-e2e": "apps/root-component-store-e2e",
     "root-store": "apps/root-store",
     "root-store-e2e": "apps/root-store-e2e",
     "standard": "apps/standard",
