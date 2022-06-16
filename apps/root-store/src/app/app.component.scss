@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.card-container {
+  height: 480px;
+  overflow: hidden;
+  width: 600px;
+  @media screen and (max-width: 600px) {
+    width: 100vw;
+    height: 100vh;
+  }
+}
